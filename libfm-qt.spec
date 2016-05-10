@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(gio-unix-2.0)
 BuildRequires: pkgconfig(xcb)
 BuildRequires: pkgconfig(libfm)
 BuildRequires: pkgconfig(libmenu-cache)
+BuildRequires: qmake5
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Widgets)
