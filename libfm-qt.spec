@@ -30,6 +30,7 @@ LXQt library for file management
 Summary: LXQt library for file management
 Group: System/Libraries
 Requires: %{name} = %{EVRD}
+Obsoletes: %{_lib}fm-qt5_2 < %{EVRD}
 
 %description -n %{libname}
 LXQt library for file management
@@ -38,6 +39,7 @@ LXQt library for file management
 Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
+Obsoletes: %{_lib}fm-qt5-devel < %{EVRD}
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
