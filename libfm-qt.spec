@@ -3,7 +3,7 @@
 %define devname %mklibname fm-qt -d
 
 Name: libfm-qt
-Version: 0.11.0
+Version: 0.11.1
 Release: 1
 Source0: https://downloads.lxqt.org/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary: LXQt library for file management
@@ -26,7 +26,7 @@ BuildRequires: cmake(Qt5X11Extras)
 BuildRequires: cmake(Qt5LinguistTools)
 
 %description
-LXQt library for file management
+LXQt library for file management.
 
 %package -n %{libname}
 Summary: LXQt library for file management
@@ -35,7 +35,7 @@ Requires: %{name} = %{EVRD}
 Obsoletes: %{_lib}fm-qt5_2 < %{EVRD}
 
 %description -n %{libname}
-LXQt library for file management
+LXQt library for file management.
 
 %package -n %{devname}
 Summary: Development files for %{name}
