@@ -24,6 +24,7 @@ BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5X11Extras)
 BuildRequires: cmake(Qt5LinguistTools)
+BuildRequires: cmake(lxqt)
 
 %description
 LXQt library for file management.
