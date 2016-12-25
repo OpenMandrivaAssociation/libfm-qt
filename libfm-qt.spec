@@ -45,6 +45,7 @@ Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
 Obsoletes: %{_lib}fm-qt5-devel < %{EVRD}
+Obsoletes: %{name} < %{EVRD}
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
@@ -58,9 +59,6 @@ Development files (Headers etc.) for %{name}.
 
 %install
 %ninja_install -C build
-
-%files
-%{_datadir}/%{name}
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
