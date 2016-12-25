@@ -26,7 +26,7 @@ BuildRequires: cmake(Qt5X11Extras)
 BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: cmake(lxqt)
 BuildRequires: cmake(lxqt-build-tools)
-BuildRequires: git-core
+Requires: lxqt-l10n
 
 %description
 LXQt library for file management.
@@ -51,7 +51,7 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
-%cmake_qt5 -G Ninja
+%cmake_qt5 -DPULL_TRANSLATIONS=NO -G Ninja
 
 %build
 %ninja -C build
