@@ -4,7 +4,7 @@
 
 Name: libfm-qt
 Version: 0.11.2
-Release: 2
+Release: 3
 Source0: https://downloads.lxqt.org/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: http://lxqt.org/
@@ -34,7 +34,6 @@ LXQt library for file management.
 %package -n %{libname}
 Summary: LXQt library for file management
 Group: System/Libraries
-Requires: %{name} = %{EVRD}
 Obsoletes: %{_lib}fm-qt5_2 < %{EVRD}
 
 %description -n %{libname}
