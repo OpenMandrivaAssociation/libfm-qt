@@ -3,9 +3,9 @@
 %define devname %mklibname fm-qt -d
 
 Name: libfm-qt
-Version: 0.11.2
-Release: 4
-Source0: https://downloads.lxqt.org/%{name}/%{version}/%{name}-%{version}.tar.xz
+Version: 0.12.0
+Release: 1
+Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: http://lxqt.org/
 License: LGPL 2.1
@@ -27,6 +27,8 @@ BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: cmake(lxqt)
 BuildRequires: cmake(lxqt-build-tools)
 Requires: lxqt-l10n
+Requires: %{libname} = %{EVRD}
+Requires: %{name}-data = %{EVRD}
 
 %description
 LXQt library for file management.
@@ -35,6 +37,7 @@ LXQt library for file management.
 Summary: LXQt library for file management
 Group: System/Libraries
 Obsoletes: %{_lib}fm-qt5_2 < %{EVRD}
+Requires: %{name}-data = %{EVRD}
 %rename %{name}
 
 %description -n %{libname}
@@ -49,6 +52,15 @@ Obsoletes: %{_lib}fm-qt5-devel < %{EVRD}
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
 
+%package data
+Summary: Data files needed for the LXQt file management library
+Group: System/Libraries
+BuildArch: noarch
+Requires: %{libname} = %{EVRD}
+
+%description data
+Data files needed for the LXQt file management library
+
 %prep
 %setup -q
 %cmake_qt5 -DPULL_TRANSLATIONS=NO -G Ninja
@@ -58,6 +70,10 @@ Development files (Headers etc.) for %{name}.
 
 %install
 %ninja_install -C build
+
+%files data
+%{_datadir}/libfm-qt
+%{_datadir}/mime/packages/libfm-qt-mimetypes.xml
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
