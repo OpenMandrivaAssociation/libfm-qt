@@ -1,10 +1,10 @@
-%define major 3
+%define major 5
 %define libname %mklibname fm-qt %{major}
 %define devname %mklibname fm-qt -d
 
 Name: libfm-qt
-Version: 0.12.0
-Release: 2
+Version: 0.13.1
+Release: 1
 Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: http://lxqt.org/
@@ -37,6 +37,7 @@ LXQt library for file management.
 Summary: LXQt library for file management
 Group: System/Libraries
 Obsoletes: %{_lib}fm-qt5_2 < %{EVRD}
+Obsoletes: %{_lib}fm-qt3 < %{EVRD}
 Requires: %{name}-data
 %rename %{name}
 
