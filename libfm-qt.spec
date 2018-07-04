@@ -17,6 +17,7 @@ BuildRequires: pkgconfig(gio-2.0)
 BuildRequires: pkgconfig(gio-unix-2.0)
 BuildRequires: pkgconfig(xcb)
 BuildRequires: pkgconfig(libfm)
+BuildRequires: pkgconfig(libfm-extra)
 BuildRequires: pkgconfig(libmenu-cache)
 BuildRequires: pkgconfig(libexif)
 BuildRequires: qmake5
