@@ -4,7 +4,7 @@
 
 Name: libfm-qt
 Version: 0.13.1
-Release: 2
+Release: 3
 Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: http://lxqt.org/
