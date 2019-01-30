@@ -1,0 +1,11 @@
+diff -up libfm-qt-0.14.0/src/CMakeLists.txt.omv~ libfm-qt-0.14.0/src/CMakeLists.txt
+--- libfm-qt-0.14.0/src/CMakeLists.txt.omv~	2019-01-30 15:12:47.219276017 +0100
++++ libfm-qt-0.14.0/src/CMakeLists.txt	2019-01-30 15:13:10.067583617 +0100
+@@ -225,6 +225,7 @@ export(TARGETS ${LIBFM_QT_LIBRARY_NAME}
+ )
+ 
+ # install a pkgconfig file for libfm-qt
++set(REQUIRED_QT_VERSION 5.12.0)
+ set(REQUIRED_QT "Qt5Widgets >= ${REQUIRED_QT_VERSION} Qt5X11Extras >= ${REQUIRED_QT_VERSION}")
+ configure_file(libfm-qt.pc.in lib${LIBFM_QT_LIBRARY_NAME}.pc @ONLY)
+ # FreeBSD loves to install files to different locations

@@ -6,6 +6,7 @@ Name: libfm-qt
 Version: 0.14.0
 Release: 1
 Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
+Patch0: libfm-qt-0.14.0-fix-pkgconfig.patch
 Summary: LXQt library for file management
 URL: http://lxqt.org/
 License: LGPL 2.1
@@ -29,7 +30,6 @@ BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: cmake(Exif)
 BuildRequires: cmake(lxqt)
 BuildRequires: cmake(lxqt-build-tools)
-Requires: lxqt-l10n
 Requires: %{libname} = %{EVRD}
 Requires: %{name}-data = %{EVRD}
 
@@ -66,7 +66,7 @@ BuildArch: noarch
 Data files needed for the LXQt file management library
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_qt5 -DPULL_TRANSLATIONS=NO -G Ninja
 
 %build
