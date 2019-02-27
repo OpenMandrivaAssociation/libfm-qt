@@ -3,10 +3,9 @@
 %define devname %mklibname fm-qt -d
 
 Name: libfm-qt
-Version: 0.14.0
+Version: 0.14.1
 Release: 1
 Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
-Patch0: libfm-qt-0.14.0-fix-pkgconfig.patch
 Summary: LXQt library for file management
 URL: http://lxqt.org/
 License: LGPL 2.1
