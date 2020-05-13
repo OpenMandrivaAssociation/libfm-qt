@@ -4,10 +4,10 @@
 
 Name: libfm-qt
 Version: 0.15.0
-Release: 1
-Source0: https://github.com/lxqt/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
+Release: 2
+Source0: https://github.com/lxqt/libfm-qt/releases/download/%{version}/libfm-qt-%{version}.tar.xz
 Summary: LXQt library for file management
-URL: http://lxqt.org/
+URL: http://lxqt.github.io/
 License: LGPL 2.1
 Group: System/Libraries
 BuildRequires: cmake
