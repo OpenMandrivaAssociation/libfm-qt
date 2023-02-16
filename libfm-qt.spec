@@ -3,7 +3,7 @@
 
 Name: libfm-qt
 Version: 1.2.1
-Release: 1
+Release: 2
 Source0: https://github.com/lxqt/libfm-qt/releases/download/%{version}/libfm-qt-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: http://lxqt.github.io/
