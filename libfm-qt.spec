@@ -19,7 +19,7 @@ BuildRequires: pkgconfig(libfm)
 BuildRequires: pkgconfig(libfm-extra)
 BuildRequires: pkgconfig(libmenu-cache)
 BuildRequires: pkgconfig(libexif)
-BuildRequires: qmake5
+BuildRequires: qmake-qt6
 BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Widgets)
@@ -31,6 +31,9 @@ BuildRequires: cmake(lxqt-menu-data) >= 2.0.0
 Requires: lxqt-menu-data
 Requires: %{libname} = %{EVRD}
 Requires: %{name}-data = %{EVRD}
+
+%patchlist
+libfm-qt-6.10.patch
 
 %description
 LXQt library for file management.
