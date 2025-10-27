@@ -3,7 +3,7 @@
 
 Name: libfm-qt
 Version: 2.2.0
-Release: 2
+Release: 3
 Source0: https://github.com/lxqt/libfm-qt/releases/download/%{version}/libfm-qt-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: https://lxqt.github.io/
@@ -31,6 +31,8 @@ BuildRequires: cmake(lxqt-menu-data) >= 2.0.0
 Requires: lxqt-menu-data
 Requires: %{libname} = %{EVRD}
 Requires: %{name}-data = %{EVRD}
+BuildSystem:	cmake
+BuildOption:	-DPULL_TRANSLATIONS:BOOL=OFF
 
 %patchlist
 libfm-qt-6.10.patch
@@ -65,15 +67,9 @@ BuildArch: noarch
 %description data
 Data files needed for the LXQt file management library
 
-%prep
-%autosetup -p1
-%cmake -DPULL_TRANSLATIONS=NO -G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
+%install -a
+# Make sure the "uncommon" dependency is found
+sed -i -e '/CMAKE_IMPORT_FILE_VERSION 1/ifind_package(Qt6 "6.0.0" REQUIRED COMPONENTS GuiPrivate)' %{buildroot}%{_datadir}/cmake/fm-qt6/fm-qt6-targets.cmake
 
 %files data
 %{_datadir}/libfm-qt6
