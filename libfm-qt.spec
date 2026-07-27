@@ -9,8 +9,6 @@ Summary: LXQt library for file management
 URL: https://lxqt.github.io/
 License: LGPL 2.1
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: ninja
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(gio-2.0)
 BuildRequires: pkgconfig(gio-unix-2.0)
