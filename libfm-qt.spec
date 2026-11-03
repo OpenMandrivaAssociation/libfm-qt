@@ -2,8 +2,8 @@
 %define devname %mklibname fm-qt -d
 
 Name: libfm-qt
-Version: 2.4.0
-Release: 2
+Version: 2.5.0
+Release: 1
 Source0: https://github.com/lxqt/libfm-qt/releases/download/%{version}/libfm-qt-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: https://lxqt.github.io/
@@ -13,19 +13,15 @@ BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(gio-2.0)
 BuildRequires: pkgconfig(gio-unix-2.0)
 BuildRequires: pkgconfig(xcb)
-BuildRequires: pkgconfig(libfm)
-BuildRequires: pkgconfig(libfm-extra)
-BuildRequires: pkgconfig(libmenu-cache)
 BuildRequires: pkgconfig(libexif)
-BuildRequires: qmake-qt6
 BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6Gui)
+BuildRequires: cmake(Qt6GuiPrivate)
 BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6LinguistTools)
 BuildRequires: cmake(Exif)
-BuildRequires: cmake(lxqt)
-BuildRequires: cmake(lxqt2-build-tools)
-BuildRequires: cmake(lxqt-menu-data) >= 2.0.0
+BuildRequires: cmake(lxqt2-build-tools) >= 2.5.0
+BuildRequires: cmake(lxqt-menu-data) >= 2.5.0
 Requires: lxqt-menu-data
 Requires: %{libname} = %{EVRD}
 Requires: %{name}-data = %{EVRD}
@@ -50,8 +46,6 @@ LXQt library for file management.
 Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
-Requires: pkgconfig(libexif)
-Requires: pkgconfig(libmenu-cache)
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
