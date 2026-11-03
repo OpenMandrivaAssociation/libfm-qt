@@ -3,7 +3,7 @@
 
 Name: libfm-qt
 Version: 2.5.0
-Release: 1
+Release: 2
 Source0: https://github.com/lxqt/libfm-qt/releases/download/%{version}/libfm-qt-%{version}.tar.xz
 Summary: LXQt library for file management
 URL: https://lxqt.github.io/
@@ -29,6 +29,7 @@ BuildSystem:	cmake
 BuildOption:	-DPULL_TRANSLATIONS:BOOL=OFF
 
 %patchlist
+libfm-qt-2.5.0-private-libs.patch
 
 %description
 LXQt library for file management.
